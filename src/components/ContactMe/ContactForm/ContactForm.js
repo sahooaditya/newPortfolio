@@ -9,25 +9,68 @@ import {
   deleteDoc,
   getDoc,
 } from "firebase/firestore";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const ContactForm = () => {
-  const [first, setFirst] = useState();
-  const [last, setLast] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   const dbref = collection(db, "contact_details");
 
+  const validateForm = () => {
+    const errors = {};
+
+    if (!first.trim()) {
+      errors.first = "First name is required";
+    }
+    if (!last.trim()) {
+      errors.last = "Last name is required";
+    }
+    if (!email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Email is invalid";
+    }
+    if (!message.trim()) {
+      errors.message = "Message is required";
+    }
+
+    setErrors(errors);
+
+    return Object.keys(errors).length === 0;
+  };
+
   const add = async () => {
-    const adddata = await addDoc(dbref, {
-      First_name: first,
-      Last_name: last,
-      Email: email,
-      Message: message,
-    });
-    if (adddata) {
-      alert("success full message send");
-    } else {
-      alert(" not send message");
+    if (!validateForm()) return; // Check if form is valid
+
+    setIsLoading(true); // Set isLoading to true while sending data
+
+    try {
+      await addDoc(dbref, {
+        First_name: first,
+        Last_name: last,
+        Email: email,
+        Message: message,
+      });
+      setSuccessMessage("Successfully sent message");
+
+      setTimeout(() => {
+        setFirst("");
+        setLast("");
+        setEmail("");
+        setMessage("");
+        setSuccessMessage("");
+        setIsLoading(false);
+      }, 2000);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message");
+      setIsLoading(false);
     }
   };
 
@@ -42,6 +85,7 @@ const ContactForm = () => {
             value={first}
             onChange={(e) => setFirst(e.target.value)}
           />
+
           <input
             type="text"
             name="last"
@@ -50,6 +94,12 @@ const ContactForm = () => {
             onChange={(e) => setLast(e.target.value)}
           />
         </div>
+        <div className="name-containers">
+          {errors.first && (
+            <div style={{ color: "orange" }}>{errors.first}</div>
+          )}
+          {errors.last && <div style={{ color: "orange" }}>{errors.last}</div>}
+        </div>
         <input
           type="text"
           name="email"
@@ -57,6 +107,7 @@ const ContactForm = () => {
           placeholder="Enter your Email"
           onChange={(e) => setEmail(e.target.value)}
         />
+        {errors.email && <div style={{ color: "orange" }}>{errors.email}</div>}
         <textarea
           type="text"
           name="message"
@@ -65,7 +116,15 @@ const ContactForm = () => {
           rows={3}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button onClick={add}>SEND</button>
+        {errors.message && (
+          <div style={{ color: "orange" }}>{errors.message}</div>
+        )}
+        <button onClick={add}>
+          {isLoading ? <CircularProgress size={24} /> : "SEND"}
+        </button>
+        {successMessage && (
+          <div style={{ color: "green" }}>{successMessage}</div>
+        )}
       </contact>
     </div>
   );

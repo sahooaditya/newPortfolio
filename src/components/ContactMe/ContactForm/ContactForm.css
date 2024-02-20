@@ -13,6 +13,11 @@ contact {
     align-items: center;
     grid-gap: 1.5rem;
 }
+.name-containers {
+    display: flex;
+    align-items: center;
+    grid-gap: 10rem;
+}
 contact input,
  contact textarea{
     flex: 1;
@@ -46,6 +51,10 @@ contact input,
     flex-direction: column;
     align-items: flex-start;
 }
+ .name-containers {
+    grid-gap: 0.5rem; /* Adjust the grid gap */
+  }
+
 contact input,
 contact textarea{
     padding: 0.7rem;
