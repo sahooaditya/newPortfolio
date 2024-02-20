@@ -1,9 +1,9 @@
 
 
-.contact-form-content { 
+.contact-contact-content { 
     width: 100%;
 }
-form {
+contact {
     display: flex;
     flex-direction: column;
     grid-gap: 1.5rem;
@@ -13,8 +13,8 @@ form {
     align-items: center;
     grid-gap: 1.5rem;
 }
-form input,
- form textarea{
+contact input,
+ contact textarea{
     flex: 1;
     width: 100%;
     font-size: 0.9rem;
@@ -25,7 +25,7 @@ form input,
     padding: 1rem;
 
  }
- form button{
+ contact button{
     font-size: 1rem;
     font-weight: 500;
     color: #fff;
@@ -36,7 +36,7 @@ form input,
     transition: all 0.3s ease;
     cursor: pointer;
  }
- form button:hover{
+ contact button:hover{
     color: #a892fe;
     background: transparent;
  }
@@ -46,13 +46,13 @@ form input,
     flex-direction: column;
     align-items: flex-start;
 }
-form input,
-form textarea{
+contact input,
+contact textarea{
     padding: 0.7rem;
     border-radius: 0.3rem;
 }
 
-form button{
+contact button{
     font-size: 0.9rem;
     padding: 0.7rem;
     border-radius: 0.3rem;
