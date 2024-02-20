@@ -46,10 +46,9 @@ const ContactForm = () => {
   };
 
   const add = async () => {
-    if (!validateForm()) return; // Check if form is valid
+    if (!validateForm()) return;
 
-    setIsLoading(true); // Set isLoading to true while sending data
-
+    setIsLoading(true);
     try {
       await addDoc(dbref, {
         First_name: first,
@@ -66,7 +65,7 @@ const ContactForm = () => {
         setMessage("");
         setSuccessMessage("");
         setIsLoading(false);
-      }, 2000);
+      }, 700);
     } catch (error) {
       console.error("Error sending message:", error);
       alert("Failed to send message");
@@ -96,9 +95,15 @@ const ContactForm = () => {
         </div>
         <div className="name-containers">
           {errors.first && (
-            <div style={{ color: "orange" }}>{errors.first}</div>
+            <div style={{ color: "orange", marginTop: "-1.5rem" }}>
+              {errors.first}
+            </div>
           )}
-          {errors.last && <div style={{ color: "orange" }}>{errors.last}</div>}
+          {errors.last && (
+            <div style={{ color: "orange", marginTop: "-1.5rem" }}>
+              {errors.last}
+            </div>
+          )}
         </div>
         <input
           type="text"
@@ -107,7 +112,11 @@ const ContactForm = () => {
           placeholder="Enter your Email"
           onChange={(e) => setEmail(e.target.value)}
         />
-        {errors.email && <div style={{ color: "orange" }}>{errors.email}</div>}
+        {errors.email && (
+          <div style={{ color: "orange", marginTop: "-1rem" }}>
+            {errors.email}
+          </div>
+        )}
         <textarea
           type="text"
           name="message"
@@ -117,7 +126,9 @@ const ContactForm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
         {errors.message && (
-          <div style={{ color: "orange" }}>{errors.message}</div>
+          <div style={{ color: "orange", marginTop: "-1rem" }}>
+            {errors.message}
+          </div>
         )}
         <button onClick={add}>
           {isLoading ? <CircularProgress size={24} /> : "SEND"}
