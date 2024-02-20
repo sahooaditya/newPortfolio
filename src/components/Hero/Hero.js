@@ -10,10 +10,17 @@ const Hero = () => {
   return (
     <section className="hero-container">
       <div className="hero-content">
-        <h2>Building Digital Experiences That Inspire</h2>
+        <h2>React Fronted Developer</h2>
         <p>
-          Passionate Frontend Developer | Transforming Ideas into Seamless and
-          Visually Stunning Web Solutions
+          "Hello! 👋 I'm Aditya Kumar Sahu, a dedicated React.js developer with
+          a proven track record of delivering high-quality and innovative web
+          solutions. Over the past 2.7+ years, I've had the privilege of working
+          on diverse projects, honing my skills in front-end development, and
+          building robust, user-friendly applications.
+          <b style={{ color: "#96b951" }}>
+            {" "}
+            I am actively seeking new job opportunities."
+          </b>
         </p>
       </div>
       <div className="hero-img">
