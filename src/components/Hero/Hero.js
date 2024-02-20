@@ -18,9 +18,9 @@ const Hero = () => {
       </div>
       <div className="hero-img">
         <div>
-          <div className="tech-icon">
+          {/* <div className="tech-icon">
             <img src={js} alt="" />
-          </div>
+          </div> */}
           <img src={Logo} alt="" />
         </div>
         <div>
