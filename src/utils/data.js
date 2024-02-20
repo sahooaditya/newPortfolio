@@ -1,7 +1,7 @@
 export const SKILLS = [
   {
     title: "Frontend",
-    icon: "./assets/images/font.png",
+    icon: "https://w1.pngwing.com/pngs/751/223/png-transparen…ce-design-web-application-wordpress-thumbnail.png",
     skills: [
       { skill: "HTML5", percentage: "80%" },
       { skill: "CSS3 (Sass/SCSS)", percentage: "90%" },

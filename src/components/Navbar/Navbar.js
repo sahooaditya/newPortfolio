@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Logo from "../../assets/images/ad.jpeg";
 import MobileNav from "./MobileNav/MobileNav";
-import fileDownload from "js-file-download";
 import resumePDF from "../../assets/images/AdityaKumarSahu(update resume1).pdf";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
-
   const handleDownload = () => {
-    // Create a temporary link element
     const link = document.createElement("a");
     link.href = resumePDF;
     link.setAttribute("download", "AdityaKumarSahu_resume.pdf"); // Adjusted file name
     document.body.appendChild(link);
-    // Trigger the download
     link.click();
-    // Clean up
     document.body.removeChild(link);
   };
   return (
@@ -51,7 +46,7 @@ const Navbar = () => {
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
             <span style={{ fontSize: "1.8rem" }}>
-              {openMenu ? <MenuIcon /> : <MenuIcon />}
+              {openMenu ? <CloseIcon /> : <MenuIcon />}
             </span>
           </button>
         </div>

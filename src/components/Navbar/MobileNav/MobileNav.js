@@ -1,8 +1,18 @@
 import React from "react";
 import "./MobileNav.css";
 // import Logo from "../../../assets/images/ad.jpeg";
+import resumePDF from "../../../assets/images/AdityaKumarSahu(update resume1).pdf";
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = resumePDF;
+    link.setAttribute("download", "AdityaKumarSahu_resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div>
       <div
@@ -25,7 +35,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
             <li>
               <a className="menu-item">Contact Me</a>
             </li>
-            <button className="contact-btn" onClick={() => {}}>
+            <button className="contact-btn" onClick={handleDownload}>
               Hire Me
             </button>
           </ul>
