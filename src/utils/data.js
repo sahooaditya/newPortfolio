@@ -1,17 +1,17 @@
 export const SKILLS = [
   {
     title: "Frontend",
-    icon: "https://w1.pngwing.com/pngs/751/223/png-transparen…ce-design-web-application-wordpress-thumbnail.png",
+    icon: "../assets/images/html.png",
     skills: [
       { skill: "HTML5", percentage: "80%" },
       { skill: "CSS3 (Sass/SCSS)", percentage: "90%" },
-      { skill: "JavaScript", percentage: "75%" },
+      { skill: "JavaScript", percentage: "95%" },
       { skill: "React.js", percentage: "80%" },
     ],
   },
   {
     title: "Backend",
-    icon: "./assets/images/backend-icon.png",
+    icon: "../../assets/images/css.png",
     skills: [
       { skill: "Node.js", percentage: "70%" },
       { skill: "Express.js", percentage: "65%" },

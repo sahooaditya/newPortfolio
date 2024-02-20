@@ -28,4 +28,10 @@
 .contact-details-card p{
     font-size: 0.9rem;
     font-weight: 400;
+
+}
+
+.contact-details-card p:hover {
+   color: rgb(136, 0, 255);
+    
 }
