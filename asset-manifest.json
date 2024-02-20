@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/newPortfolio/static/css/main.d2a116ba.css",
-    "main.js": "/newPortfolio/static/js/main.2aaa6ed4.js",
+    "main.css": "/newPortfolio/static/css/main.087eb3f3.css",
+    "main.js": "/newPortfolio/static/js/main.49a909ac.js",
     "static/js/453.ace21015.chunk.js": "/newPortfolio/static/js/453.ace21015.chunk.js",
     "static/media/AdityaKumarSahu(update resume1).pdf": "/newPortfolio/static/media/AdityaKumarSahu(update resume1).0b42632c9a158237f8f2.pdf",
     "static/media/ad.jpeg": "/newPortfolio/static/media/ad.7504a56a8825bea0d8e9.jpeg",
@@ -12,12 +12,12 @@
     "static/media/slick.ttf": "/newPortfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/newPortfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/newPortfolio/index.html",
-    "main.d2a116ba.css.map": "/newPortfolio/static/css/main.d2a116ba.css.map",
-    "main.2aaa6ed4.js.map": "/newPortfolio/static/js/main.2aaa6ed4.js.map",
+    "main.087eb3f3.css.map": "/newPortfolio/static/css/main.087eb3f3.css.map",
+    "main.49a909ac.js.map": "/newPortfolio/static/js/main.49a909ac.js.map",
     "453.ace21015.chunk.js.map": "/newPortfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2a116ba.css",
-    "static/js/main.2aaa6ed4.js"
+    "static/css/main.087eb3f3.css",
+    "static/js/main.49a909ac.js"
   ]
 }
