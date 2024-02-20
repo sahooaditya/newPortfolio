@@ -8,7 +8,7 @@ import hero from "../../assets/images/hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="hero-container">
+    <section className="hero-container" id="home">
       <div className="hero-content">
         <h2>React Fronted Developer</h2>
         <p>
