@@ -9,9 +9,9 @@ contact {
     grid-gap: 1.5rem;
 }
 .name-container {
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    grid-gap: 1.5rem;
+    /* grid-gap: 1.5rem; */
 }
 .name-containers {
     display: flex;

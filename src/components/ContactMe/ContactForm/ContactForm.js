@@ -84,7 +84,19 @@ const ContactForm = () => {
             value={first}
             onChange={(e) => setFirst(e.target.value)}
           />
-
+          {errors.first && (
+            <div
+              style={{
+                color: "orange",
+                marginTop: "0.5rem",
+                fontSize: "0.8rem",
+              }}
+            >
+              {errors.first}
+            </div>
+          )}
+        </div>
+        <div className="name-container">
           <input
             type="text"
             name="last"
@@ -92,19 +104,19 @@ const ContactForm = () => {
             placeholder="Last Name"
             onChange={(e) => setLast(e.target.value)}
           />
-        </div>
-        <div className="name-containers">
-          {errors.first && (
-            <div style={{ color: "orange", marginTop: "-1.5rem" }}>
-              {errors.first}
-            </div>
-          )}
           {errors.last && (
-            <div style={{ color: "orange", marginTop: "-1.5rem" }}>
+            <div
+              style={{
+                color: "orange",
+                marginTop: "0.5rem",
+                fontSize: "0.8rem",
+              }}
+            >
               {errors.last}
             </div>
           )}
         </div>
+
         <input
           type="text"
           name="email"
@@ -113,7 +125,9 @@ const ContactForm = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         {errors.email && (
-          <div style={{ color: "orange", marginTop: "-1rem" }}>
+          <div
+            style={{ color: "orange", marginTop: "-1rem", fontSize: "0.8rem" }}
+          >
             {errors.email}
           </div>
         )}
@@ -126,7 +140,9 @@ const ContactForm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
         {errors.message && (
-          <div style={{ color: "orange", marginTop: "-1rem" }}>
+          <div
+            style={{ color: "orange", marginTop: "-1rem", fontSize: "0.8rem" }}
+          >
             {errors.message}
           </div>
         )}
