@@ -3,6 +3,7 @@ import "./Skills.css";
 import { SKILLS } from "../../utils/data";
 import SkillCard from "./SkillCard/SkillCard";
 import SkillsInfoCard from "./SkillsInfoCard/SkillsInfoCard";
+import BoobleCreate from "../Booble/BoobleCreate";
 
 const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState(SKILLS[0]);
@@ -12,6 +13,7 @@ const Skills = () => {
   return (
     <section className="skills-container" id="skill">
       <h5>Technical Proficiency</h5>
+      <BoobleCreate />
 
       <div className="skills-content">
         <div className="skills">

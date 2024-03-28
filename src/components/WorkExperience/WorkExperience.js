@@ -5,6 +5,7 @@ import { WORK_EXPERIENCE } from "../../utils/data";
 import Slider from "react-slick";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import BoobleCreate from "../Booble/BoobleCreate";
 
 const WorkExperience = () => {
   const sliderRef = useRef();
@@ -35,6 +36,7 @@ const WorkExperience = () => {
   return (
     <section className="experience-container" id="Experience">
       <h5>Work Experience</h5>
+      <BoobleCreate />
 
       <div className="experience-content">
         <div className="arrow-right" onClick={slideRight}>

@@ -5,10 +5,12 @@ import html from "../../assets/images/html.png";
 import css from "../../assets/images/css.png";
 import js from "../../assets/images/js.png";
 import hero from "../../assets/images/hero.jpg";
+import BoobleCreate from "../Booble/BoobleCreate";
 
 const Hero = () => {
   return (
     <section className="hero-container" id="home">
+      <BoobleCreate />
       <div className="hero-content">
         <h2>React Fronted Developer</h2>
         <p>
