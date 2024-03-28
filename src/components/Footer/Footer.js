@@ -4,6 +4,7 @@ import face from "../../assets/images/facebook.png";
 import insta from "../../assets/images/insta.png";
 import linkdin from "../../assets/images/linkdin.png";
 import git from "../../assets/images/git1.png";
+import BoobleCreate from "../Booble/BoobleCreate";
 
 const Footer = () => {
   return (
