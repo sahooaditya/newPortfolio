@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          {/* <h3>Time To Program</h3>
+          {/* <h3>Time To Program   ss</h3>
           <p>Connect with us on social media:</p> */}
           <div className="social-icons">
             <a href="https://www.facebook.com">
