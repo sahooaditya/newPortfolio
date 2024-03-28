@@ -25,7 +25,6 @@ const Navbar = () => {
       <nav className="nav-wrapper ">
         <div className="nav-content">
           <div className="logo">AdiTya</div>
-
           <ul>
             <li>
               <a href="#home" className="menu-item">
